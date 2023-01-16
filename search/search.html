@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="../search/search.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../js/settemplate.js"></script>
+  <script src="../../games/gametofunction.js"></script>
+   <script src="../../games/gameurls.js"></script>
+  <script src="goto.js"></script>
+  <script src="../js/inbead.js"></script>
+</head>
+
+<body>
+  <!-- Overlay startes here-->
+<div id="myOverlay" class="overlay">
+  <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+  <div class="overlay-content">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category"></input>
+          <ul scrolling="auto" id="myMenu">
+      <li><div class="game" onclick="goto(),vex6()"><img src="" class="gameimg"><a onclick="" class="gameinfo">vex6</a></div></li>
+      <li><div class="game" onclick="goto(),retrobowl()"><img src="" class="gameimg"><a onclick="" class="gameinfo">Retro Bowl</a></div></li>
+      <li><div class="game" onclick=""><img src="" class="gameimg"><a onclick="" class="gameinfo">t</a></div></li>
+      <li><div class="game" onclick=""><img src="" class="gameimg"><a onclick="" class="gameinfo">c</a></div></li>
+    </ul>
+    </form>
+  </div>
+</div>
+ <!-- overlay endes here--> 
+  
+<div class="topnav">
+  <a class="active"id="subtitle" onclick="sethome()">Moonstone Gaming</a>
+  <a onclick="" class="split">Bookmarks</a>
+  <a onclick="setsettings()" class="split">Settings</a>
+  <a onclick="openSearch()" class="split">Games</a>
+  <a onclick="sethome()" class="split">Home</a>
+</div>
+<script src="search.js"></script></body>
+  <script src="../js/disable.js"></script>
+  <script onload="run()">
+    run()
+  </script>
+</html>

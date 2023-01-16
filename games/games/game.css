@@ -1,0 +1,17 @@
+#wrapper {
+    min-width: 600px; /* 100px x3 = 300 */
+    overflow:scroll;
+}
+.fullscreenbutton {
+    width: 100%; 
+    height: 27px;
+    border-radius: 12px;
+    background-color: #070070;
+    font-family: Arial, Helvetica, sans-serif;
+    border: true;
+    border-color: #000000;
+    transition: background-color 500ms;
+}
+button:hover {
+    background-color: #0b00a8;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../settings/settings.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+<script src="../js/settemplate.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+</head>
+<body>
+  <script>
+$('body').terminal({
+    settitle: function(name) {
+        document.title = name
+        this.echo("title now set to "+name)
+        localStorage.setItem("title", name);
+    },
+    clearall: function() {
+        document.title(cleartitle)
+        setFavicons(clearimage)
+    },
+    setimage: function(image) {
+        setFavicons(image)
+        this.echo("favicon now set to "+image)
+        localStorage.setItem("favicon", image);
+    },
+    home: function() {
+        window.location.href = '../home/home.html';
+    },
+    help: function() {
+      this.echo("the list of commands you can run are settilte, clearall, setimage, home, help, type example followed by the command to see how they work")
+    },
+    example: function(type) {
+      if(type =="settitle"){
+       this.echo('type settitle followed by the name you want the page to be, For example "setitle test" will set the page title to test')
+      }
+      if(type =="clearall"){
+        this.echo('this will clear the tab title and image. For example "cleartitle" will chage the tab image and title to the defult one')
+      }
+      if(type =="setimage"){
+        this.echo('type setimage followed by the url of the picture you want the page to be, For example "setimage https://google.com/favicon.ico" will set the page image to googles logo')
+      }
+      if(type =="home"){
+        this.echo('this will take you back to the home page of the site. For example "home" will take you back to the main site page without having to login again')
+      }
+    }
+}, {
+  greetings:'Welcome to the settings terminel you can type help to see a list of commands you can run'
+});
+
+
+</script>
+</body>
+  <script src=../js/disable.js></script>
+</html>
